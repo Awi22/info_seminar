@@ -1,3 +1,5 @@
+.DS_Store
+
 */config/development
 */logs/log-*.php
 !*/logs/index.html
@@ -6,6 +8,10 @@
 !*/cache/index.html
 !*/cache/.htaccess
 
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
 .vscode/*
 
 user_guide_src/build/*
@@ -13,8 +19,26 @@ user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
+/vendor/
+
 #codeigniter 3
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
+
+application/cache/*
+!application/cache/index.html
+!application/*/.htaccess
+
+composer.lock
+tests/mocks/database/ci_test.sqlite
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+/tests/tests/
+/tests/results/
