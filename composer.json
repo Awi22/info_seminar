@@ -11,11 +11,25 @@
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
 	"require": {
-		"php": ">=5.3.7"
+		"php": ">=5.3.7",
+		"illuminate/database": "^7.28",
+        "illuminate/http": "^7.29",
+        "illuminate/events": "^7.29",
+        "guzzlehttp/guzzle": "^7.2",
+        "pear/crypt_gpg": "^1.6",
+        "pear/console_commandline": "^1.2",
+        "pear/pear_exception": "^1.0",
+        "chillerlan/php-qrcode": "^3.4",
+        "pusher/pusher-php-server": "^6.1"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
 	},
+	"autoload": {
+        "psr-4": {
+            "app\\": "application/"
+        }
+    },
 	"scripts": {
 		"test:coverage": [
 			"@putenv XDEBUG_MODE=coverage",
