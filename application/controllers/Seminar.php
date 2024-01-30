@@ -12,7 +12,7 @@ class Seminar extends CI_Controller
     public function index()
     {
         $data = [
-            'judul'    => 'Seminar',
+            'judul'    => 'Jadwal Seminar Mahasiswa',
             'konten'   => 'admin/seminar'
         ];
 

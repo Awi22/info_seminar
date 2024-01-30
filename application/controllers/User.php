@@ -12,7 +12,7 @@ class User extends CI_Controller
     public function index()
     {
         $data = [
-            'judul'    => 'User',
+            'judul'    => 'Pengaturan User',
             'konten'   => 'admin/user'
         ];
 
