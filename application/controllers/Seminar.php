@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Seminar extends CI_Controller
 {
 
     public function __construct()
@@ -12,13 +12,13 @@ class Home extends CI_Controller
     public function index()
     {
         $data = [
-            'judul'    => 'JADWAL SEMINAR MAHASISWA',
-            'nama'     => 'Munawir Djamaluddin'
+            'judul'    => 'Seminar',
+            'konten'   => 'admin/seminar'
         ];
 
-        $this->load->view('home/index', $data);
+        $this->load->view('_template/index', $data);
     }
 }
 
-/* End of file Home.php */
-/* Location: ./controllers/Home.php */
+/* End of file Seminar.php */
+/* Location: ./controllers/Seminar.php */
