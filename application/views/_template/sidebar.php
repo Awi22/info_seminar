@@ -29,7 +29,7 @@
                     <!--begin:Menu item-->
                     <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
                         <!--begin:Menu link-->
-                        <span class="menu-link">
+                        <a class="menu-link" href="<?= base_url() ?>dashboard">
                             <span class="menu-icon">
                                 <i class="ki-duotone ki-element-11 fs-2">
                                     <span class="path1"></span>
@@ -39,7 +39,7 @@
                                 </i>
                             </span>
                             <span class="menu-title">DASHBOARD</span>
-                        </span>
+                        </a>
                         <!--end:Menu link-->
                     </div>
                     <!--end:Menu item-->
@@ -55,7 +55,7 @@
                     <!--begin:Menu item-->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
-                        <span class="menu-link">
+                        <a class="menu-link" href="<?= base_url() ?>user">
                             <span class="menu-icon">
                                 <i class="ki-duotone ki-user fs-2">
                                     <span class="path1"></span>
@@ -64,7 +64,7 @@
                                 </i>
                             </span>
                             <span class="menu-title">Pengaturan User</span>
-                        </span>
+                        </a>
                         <!--end:Menu link-->
                     </div>
                     <!--end:Menu item-->
@@ -80,7 +80,7 @@
                     <!--begin:Menu item-->
                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                         <!--begin:Menu link-->
-                        <span class="menu-link">
+                        <a class="menu-link" href="<?= base_url() ?>seminar">
                             <span class="menu-icon">
                                 <i class="ki-duotone ki-teacher fs-2">
                                     <span class="path1"></span>
@@ -89,7 +89,7 @@
                                 </i>
                             </span>
                             <span class="menu-title">Data Seminar</span>
-                        </span>
+                        </a>
                         <!--end:Menu link-->
                     </div>
                     <!--end:Menu item-->

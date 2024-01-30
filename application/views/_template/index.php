@@ -3,6 +3,7 @@
 <html lang="en">
 
 <!--begin::Head-->
+
 <head>
     <title>Ilmu Tanah Universitas Hasanuddin</title>
     <meta charset="utf-8" />
@@ -88,19 +89,19 @@
                             <!--begin::Menu-->
                             <div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0" id="kt_app_header_menu" data-kt-menu="true">
                                 <!--begin:Menu item-->
-								<div class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="ki-duotone ki-teacher fs-2">
-												<span class="path1"></span>
-												<span class="path2"></span>
-												<span class="path3"></span>
-												<span class="path4"></span>
-											</i>
-										</span>
-										<span class="menu-title">JADWAL SEMINAR MAHASISWA ILMU TANAH UNHAS</span>
-									</span>
-								</div>
+                                <div class="menu-item menu-accordion">
+                                    <span class="menu-link">
+                                        <span class="menu-icon">
+                                            <i class="ki-duotone ki-teacher fs-2">
+                                                <span class="path1"></span>
+                                                <span class="path2"></span>
+                                                <span class="path3"></span>
+                                                <span class="path4"></span>
+                                            </i>
+                                        </span>
+                                        <span class="menu-title">JADWAL SEMINAR MAHASISWA</span>
+                                    </span>
+                                </div>
                             </div>
                             <!--end::Menu-->
                         </div>
@@ -117,7 +118,7 @@
                                 <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <div class="menu-content d-flex align-items-center px-3">
+                                        <div class="menu-content d-flex align-items-center px-3" style="overflow: scroll;">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-50px me-5">
                                                 <img alt="Logo" src="<?= base_url() ?>public/assets/media/avatars/300-3.jpg" />
@@ -125,15 +126,24 @@
                                             <!--end::Avatar-->
                                             <!--begin::Username-->
                                             <div class="d-flex flex-column">
-                                                <div class="fw-bold d-flex align-items-center fs-5">Munawir Djamaluddin
-                                                    <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
-                                                </div>
+                                                <div class="fw-bold d-flex align-items-center fs-5">Munawir Djamaluddin</div>
                                                 <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">robert@kt.com</a>
                                             </div>
                                             <!--end::Username-->
                                         </div>
                                     </div>
                                     <!--end::Menu item-->
+                                    <!--begin::Menu separator-->
+                                    <div class="separator my-2"></div>
+                                    <!--end::Menu separator-->
+                                    <!--begin::Menu item-->
+                                    <div class="menu-item px-5">
+                                        <!-- <a href="account/overview.html" class="menu-link px-5">My Profile</a> -->
+                                        <!-- <a href="account/overview.html" class="menu-link px-5">My Profile</a> -->
+                                        <a href="#" class="menu-link px-5" data-bs-toggle="modal" data-bs-target="#modal_ganti_password">Ganti Password</a>
+                                    </div>
+                                    <!--end::Menu item-->
+
                                     <!--begin::Menu separator-->
                                     <div class="separator my-2"></div>
                                     <!--end::Menu separator-->
@@ -184,33 +194,33 @@
                                             </div>
                                             <!--end::Menu item-->
                                             <!--begin::Menu item-->
-											<div class="menu-item px-3 my-0">
-												<a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
-													<span class="menu-icon" data-kt-element="icon">
-														<i class="ki-duotone ki-moon fs-2">
-															<span class="path1"></span>
-															<span class="path2"></span>
-														</i>
-													</span>
-													<span class="menu-title">Dark</span>
-												</a>
-											</div>
-											<!--end::Menu item-->
-											<!--begin::Menu item-->
-											<div class="menu-item px-3 my-0">
-												<a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
-													<span class="menu-icon" data-kt-element="icon">
-														<i class="ki-duotone ki-screen fs-2">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-															<span class="path4"></span>
-														</i>
-													</span>
-													<span class="menu-title">System</span>
-												</a>
-											</div>
-											<!--end::Menu item-->
+                                            <div class="menu-item px-3 my-0">
+                                                <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
+                                                    <span class="menu-icon" data-kt-element="icon">
+                                                        <i class="ki-duotone ki-moon fs-2">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                        </i>
+                                                    </span>
+                                                    <span class="menu-title">Dark</span>
+                                                </a>
+                                            </div>
+                                            <!--end::Menu item-->
+                                            <!--begin::Menu item-->
+                                            <div class="menu-item px-3 my-0">
+                                                <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
+                                                    <span class="menu-icon" data-kt-element="icon">
+                                                        <i class="ki-duotone ki-screen fs-2">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                            <span class="path3"></span>
+                                                            <span class="path4"></span>
+                                                        </i>
+                                                    </span>
+                                                    <span class="menu-title">System</span>
+                                                </a>
+                                            </div>
+                                            <!--end::Menu item-->
                                         </div>
                                         <!--end::Menu-->
                                     </div>
@@ -222,7 +232,7 @@
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-5">
-                                        <a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">Sign Out</a>
+                                        <a href="<?= base_url('auth/logout') ?>" class="menu-link px-5">Sign Out</a>
                                     </div>
                                     <!--end::Menu item-->
                                 </div>
@@ -230,18 +240,7 @@
                                 <!--end::Menu wrapper-->
                             </div>
                             <!--end::User menu-->
-                            <!--begin::Header menu toggle-->
-                            <div class="app-navbar-item d-lg-none ms-2 me-n2" title="Show header menu">
-                                <div class="btn btn-flex btn-icon btn-active-color-primary w-30px h-30px" id="kt_app_header_menu_toggle">
-                                    <i class="ki-duotone ki-element-4 fs-1">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                </div>
-                            </div>
-                            <!--end::Header menu toggle-->
-                            <!--begin::Aside toggle-->
-                            <!--end::Header menu toggle-->
+
                         </div>
                         <!--end::Navbar-->
                     </div>
@@ -4821,6 +4820,7 @@
     <script src="<?= base_url() ?>public/assets/plugins/custom/datatables/datatables.bundle.js"></script>
     <!--end::Vendors Javascript-->
     <!--begin::Custom Javascript(used for this page only)-->
+    <script src="<?= base_url() ?>public/assets/js/custom/apps/ecommerce/reports/sales/sales.js"></script>
     <script src="<?= base_url() ?>public/assets/js/widgets.bundle.js"></script>
     <script src="<?= base_url() ?>public/assets/js/custom/widgets.js"></script>
     <script src="<?= base_url() ?>public/assets/js/custom/apps/chat/chat.js"></script>
