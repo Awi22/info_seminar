@@ -53,7 +53,7 @@
                 <!--begin::Actions-->
                 <div class="d-flex align-items-center gap-2 gap-lg-3">
                     <!--begin::Primary button-->
-                    <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">
+                    <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#modal_tambah_jadwal">
                         Tambah data </a>
                     <!--end::Primary button-->
                 </div>
@@ -87,426 +87,72 @@
                         <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
                             <!--begin::Export dropdown-->
                             <button type="button" class="btn btn-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                <i class="ki-duotone ki-exit-up fs-2"><span class="path1"></span><span class="path2"></span></i> Export Report
+                                <i class="ki-duotone ki-exit-up fs-2">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </i>
+                                Export
                             </button>
-                            <!--begin::Menu-->
                             <div id="kt_ecommerce_report_sales_export_menu" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-200px py-4" data-kt-menu="true">
-                                <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link px-3" data-kt-ecommerce-export="copy">
                                         Copy to clipboard
                                     </a>
                                 </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link px-3" data-kt-ecommerce-export="excel">
                                         Export as Excel
                                     </a>
                                 </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link px-3" data-kt-ecommerce-export="csv">
                                         Export as CSV
                                     </a>
                                 </div>
-                                <!--end::Menu item-->
-
-                                <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link px-3" data-kt-ecommerce-export="pdf">
                                         Export as PDF
                                     </a>
                                 </div>
-                                <!--end::Menu item-->
                             </div>
-                            <!--end::Menu-->
                             <!--end::Export dropdown-->
                         </div>
                         <!--end::Card toolbar-->
                     </div>
                     <!--end::Card header-->
-
                     <!--begin::Card body-->
                     <div class="card-body pt-0">
-
                         <!--begin::Table-->
                         <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_report_sales_table">
                             <thead>
                                 <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
-                                    <th class="min-w-100px">Date</th>
-                                    <th class="text-end min-w-75px">No. Orders</th>
-                                    <th class="text-end min-w-75px">Products Sold</th>
-                                    <th class="text-end min-w-75px">Tax</th>
-                                    <th class="text-end min-w-100px">Total</th>
+                                    <th class="min-w-75px">NIM</th>
+                                    <th class="min-w-100px">Nama Mahasiswa</th>
+                                    <th class="min-w-75px">Tanggal Seminar</th>
+                                    <th class="text-end min-w-75px">Jam Mulai</th>
+                                    <th class="text-end min-w-75px">Jam Selesai</th>
+                                    <th class="text-end min-w-100px">Ruangan</th>
                                 </tr>
                             </thead>
                             <tbody class="fw-semibold text-gray-600">
                                 <tr>
                                     <td>
-                                        Apr 15, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        2 </td>
-                                    <td class="text-end pe-0">
-                                        5 </td>
-                                    <td class="text-end pe-0">
-                                        $82.00
+                                        H13114314
                                     </td>
-                                    <td class="text-end">
-                                        $545.00
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>
-                                        Nov 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        1 </td>
-                                    <td class="text-end pe-0">
-                                        5 </td>
-                                    <td class="text-end pe-0">
-                                        $4.00
+                                        Munawir Djamaluddin
                                     </td>
-                                    <td class="text-end">
-                                        $27.00
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>
-                                        Feb 21, 2024 </td>
+                                        30 Maret 2024
+                                    </td>
                                     <td class="text-end pe-0">
-                                        13 </td>
+                                        10.00
+                                    </td>
                                     <td class="text-end pe-0">
-                                        16 </td>
-                                    <td class="text-end pe-0">
-                                        $47.00
+                                        12.00
                                     </td>
                                     <td class="text-end">
-                                        $311.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Dec 20, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        20 </td>
-                                    <td class="text-end pe-0">
-                                        23 </td>
-                                    <td class="text-end pe-0">
-                                        $86.00
-                                    </td>
-                                    <td class="text-end">
-                                        $576.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Jul 25, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        1 </td>
-                                    <td class="text-end pe-0">
-                                        3 </td>
-                                    <td class="text-end pe-0">
-                                        $70.00
-                                    </td>
-                                    <td class="text-end">
-                                        $469.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Jun 24, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        17 </td>
-                                    <td class="text-end pe-0">
-                                        21 </td>
-                                    <td class="text-end pe-0">
-                                        $9.00
-                                    </td>
-                                    <td class="text-end">
-                                        $59.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Oct 25, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        19 </td>
-                                    <td class="text-end pe-0">
-                                        22 </td>
-                                    <td class="text-end pe-0">
-                                        $9.00
-                                    </td>
-                                    <td class="text-end">
-                                        $61.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Apr 15, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        19 </td>
-                                    <td class="text-end pe-0">
-                                        22 </td>
-                                    <td class="text-end pe-0">
-                                        $25.00
-                                    </td>
-                                    <td class="text-end">
-                                        $166.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mar 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        6 </td>
-                                    <td class="text-end pe-0">
-                                        10 </td>
-                                    <td class="text-end pe-0">
-                                        $6.00
-                                    </td>
-                                    <td class="text-end">
-                                        $41.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Jun 20, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        19 </td>
-                                    <td class="text-end pe-0">
-                                        21 </td>
-                                    <td class="text-end pe-0">
-                                        $29.00
-                                    </td>
-                                    <td class="text-end">
-                                        $190.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Feb 21, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        4 </td>
-                                    <td class="text-end pe-0">
-                                        6 </td>
-                                    <td class="text-end pe-0">
-                                        $41.00
-                                    </td>
-                                    <td class="text-end">
-                                        $273.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        May 05, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        6 </td>
-                                    <td class="text-end pe-0">
-                                        9 </td>
-                                    <td class="text-end pe-0">
-                                        $26.00
-                                    </td>
-                                    <td class="text-end">
-                                        $175.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Nov 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        4 </td>
-                                    <td class="text-end pe-0">
-                                        6 </td>
-                                    <td class="text-end pe-0">
-                                        $88.00
-                                    </td>
-                                    <td class="text-end">
-                                        $585.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mar 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        16 </td>
-                                    <td class="text-end pe-0">
-                                        20 </td>
-                                    <td class="text-end pe-0">
-                                        $39.00
-                                    </td>
-                                    <td class="text-end">
-                                        $259.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mar 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        1 </td>
-                                    <td class="text-end pe-0">
-                                        3 </td>
-                                    <td class="text-end pe-0">
-                                        $29.00
-                                    </td>
-                                    <td class="text-end">
-                                        $194.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Sep 22, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        15 </td>
-                                    <td class="text-end pe-0">
-                                        18 </td>
-                                    <td class="text-end pe-0">
-                                        $87.00
-                                    </td>
-                                    <td class="text-end">
-                                        $583.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Apr 15, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        12 </td>
-                                    <td class="text-end pe-0">
-                                        17 </td>
-                                    <td class="text-end pe-0">
-                                        $90.00
-                                    </td>
-                                    <td class="text-end">
-                                        $597.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        May 05, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        18 </td>
-                                    <td class="text-end pe-0">
-                                        23 </td>
-                                    <td class="text-end pe-0">
-                                        $45.00
-                                    </td>
-                                    <td class="text-end">
-                                        $302.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Jul 25, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        12 </td>
-                                    <td class="text-end pe-0">
-                                        17 </td>
-                                    <td class="text-end pe-0">
-                                        $13.00
-                                    </td>
-                                    <td class="text-end">
-                                        $85.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        May 05, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        17 </td>
-                                    <td class="text-end pe-0">
-                                        21 </td>
-                                    <td class="text-end pe-0">
-                                        $80.00
-                                    </td>
-                                    <td class="text-end">
-                                        $534.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Sep 22, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        17 </td>
-                                    <td class="text-end pe-0">
-                                        19 </td>
-                                    <td class="text-end pe-0">
-                                        $59.00
-                                    </td>
-                                    <td class="text-end">
-                                        $390.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Sep 22, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        9 </td>
-                                    <td class="text-end pe-0">
-                                        11 </td>
-                                    <td class="text-end pe-0">
-                                        $48.00
-                                    </td>
-                                    <td class="text-end">
-                                        $323.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mar 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        12 </td>
-                                    <td class="text-end pe-0">
-                                        17 </td>
-                                    <td class="text-end pe-0">
-                                        $19.00
-                                    </td>
-                                    <td class="text-end">
-                                        $127.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mar 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        6 </td>
-                                    <td class="text-end pe-0">
-                                        10 </td>
-                                    <td class="text-end pe-0">
-                                        $67.00
-                                    </td>
-                                    <td class="text-end">
-                                        $446.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mar 10, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        16 </td>
-                                    <td class="text-end pe-0">
-                                        18 </td>
-                                    <td class="text-end pe-0">
-                                        $80.00
-                                    </td>
-                                    <td class="text-end">
-                                        $532.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Apr 15, 2024 </td>
-                                    <td class="text-end pe-0">
-                                        5 </td>
-                                    <td class="text-end pe-0">
-                                        8 </td>
-                                    <td class="text-end pe-0">
-                                        $77.00
-                                    </td>
-                                    <td class="text-end">
-                                        $516.00
+                                        Ruangan Seminar
                                     </td>
                                 </tr>
                             </tbody>
@@ -525,27 +171,140 @@
 
     <!--begin::Footer-->
     <div id="kt_app_footer" class="app-footer ">
-        <!--begin::Footer container-->
         <div class="app-container  container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3 ">
-            <!--begin::Copyright-->
             <div class="text-gray-900 order-2 order-md-1">
                 <span class="text-muted fw-semibold me-1">2024&copy;</span>
-                <a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+                <a href="https://soil.agriculture.unhas.ac.id/" target="_blank" class="text-gray-800 text-hover-primary">Ilmu Tanah Unhas</a>
             </div>
-            <!--end::Copyright-->
-
-            <!--begin::Menu-->
-            <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
-                <li class="menu-item"><a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a></li>
-
-                <li class="menu-item"><a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a></li>
-
-                <li class="menu-item"><a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a></li>
-            </ul>
-            <!--end::Menu-->
         </div>
-        <!--end::Footer container-->
     </div>
     <!--end::Footer-->
+
 </div>
 <!--end:::Main-->
+
+<!--start::MODALS-->
+<!--begin::Modal - tamabh jadwal-->
+<div class="modal fade" id="modal_tambah_jadwal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mw-650px">
+        <div class="modal-content rounded">
+            <div class="modal-header p-5">
+                <h2 class="mb-0">Data Seminar Mahasiswa</h2>
+                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                    <i class="ki-duotone ki-cross fs-1">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                    </i>
+                </div>
+            </div>
+            <div class="modal-body scroll-y px-10 px-lg-15 pt-5 pb-5">
+                <form id="kt_modal_new_target_form" class="form" action="#">
+                    <div class="row">
+                        <div class="col">
+                            <div class="fv-row mb-5">
+                                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                    <span class="required">NIM</span>
+                                </label>
+                                <div class="position-relative d-flex align-items-center">
+                                    <i class="ki-duotone ki-simcard fs-2 position-absolute mx-4">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                        <span class="path3"></span>
+                                        <span class="path4"></span>
+                                        <span class="path5"></span>
+                                    </i>
+                                    <input type="text" class="form-control form-control ps-12" placeholder="NIM" name="nim" id="nim" autocomplete="off" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="fv-row mb-5">
+                                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                    <span class="required">Nama Mahasiswa</span>
+                                </label>
+                                <div class="position-relative d-flex align-items-center">
+                                    <i class="ki-duotone ki-user fs-2 position-absolute mx-4">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                    <input type="text" class="form-control form-control ps-12" placeholder="Nama Mahasiswa" name="nama" id="nama" autocomplete="off" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="fv-row mb-5">
+                                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                                    <span class="required">Tanggal Seminar</span>
+                                </label>
+                                <div class="position-relative d-flex align-items-center">
+                                    <i class="ki-duotone ki-calendar-add fs-2 position-absolute mx-4">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                        <span class="path3"></span>
+                                        <span class="path4"></span>
+                                        <span class="path5"></span>
+                                        <span class="path6"></span>
+                                    </i>
+                                    <input class="form-control form-control ps-12" placeholder="Tanggal Seminar" id="tanggal" name="due_date" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="fv-row mb-5">
+                                <label class="required fs-6 fw-semibold mb-2">Jam Mulai</label>
+                                <div class="position-relative d-flex align-items-center">
+                                    <i class="ki-duotone ki-time fs-2 position-absolute mx-4">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                    <input class="form-control form-control ps-12" placeholder="Jam Mulai" id="jam_mulai" name="jam_mulai" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="fv-row mb-5">
+                                <label class="required fs-6 fw-semibold mb-2">Jam Selesai</label>
+                                <div class="position-relative d-flex align-items-center">
+                                    <i class="ki-duotone ki-time fs-2 position-absolute mx-4">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                    <input class="form-control form-control ps-12" placeholder="Jam Selesai" id="jam_selesai" name="jam_selesai" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="fv-row mb-5">
+                                <label class="required fs-6 fw-semibold mb-2">Ruangan Seminar</label>
+                                <select class="form-select form-select" data-control="select2" data-hide-search="true" data-placeholder="Pilih Ruangan Seminar" id="ruangan" name="ruangan">
+                                    <option value="">Pilih ruangan...</option>
+                                    <option value="1">Ruangan A</option>
+                                    <option value="2">Ruangan B</option>
+                                    <option value="3">Ruangan C</option>
+                                    <option value="4">Ruangan D</option>
+                                    <option value="5">Ruangan E</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer p-5">
+                <button type="button" id="btn-simpan" class="btn btn-sm btn-primary">
+                    <span class="indicator-label">Simpan</span>
+                    <span class="indicator-progress">Menyimpan...
+                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end::MODALS-->
