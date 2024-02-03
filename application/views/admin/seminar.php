@@ -75,7 +75,11 @@
                         <div class="card-title">
                             <!--begin::Search-->
                             <div class="d-flex align-items-center position-relative my-1">
-                                <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-4"><span class="path1"></span><span class="path2"></span></i> <input type="text" data-kt-ecommerce-order-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Report" />
+                                <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-4">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </i>
+                                <input type="text" data-kt-ecommerce-order-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Cari" />
                             </div>
                             <!--end::Search-->
                             <!--begin::Export buttons-->
@@ -205,16 +209,7 @@
                                 <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
                                     <span class="required">NIM</span>
                                 </label>
-                                <div class="position-relative d-flex align-items-center">
-                                    <i class="ki-duotone ki-simcard fs-2 position-absolute mx-4">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                        <span class="path3"></span>
-                                        <span class="path4"></span>
-                                        <span class="path5"></span>
-                                    </i>
-                                    <input type="text" class="form-control form-control ps-12" placeholder="NIM" name="nim" id="nim" autocomplete="off" />
-                                </div>
+                                <input type="text" class="form-control form-control" placeholder="NIM" name="nim" id="nim" autocomplete="off" />
                             </div>
                         </div>
                     </div>
@@ -224,13 +219,7 @@
                                 <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
                                     <span class="required">Nama Mahasiswa</span>
                                 </label>
-                                <div class="position-relative d-flex align-items-center">
-                                    <i class="ki-duotone ki-user fs-2 position-absolute mx-4">
-                                        <span class="path1"></span>
-                                        <span class="path2"></span>
-                                    </i>
-                                    <input type="text" class="form-control form-control ps-12" placeholder="Nama Mahasiswa" name="nama" id="nama" autocomplete="off" />
-                                </div>
+                                <input type="text" class="form-control form-control" placeholder="Nama Mahasiswa" name="nama" id="nama" autocomplete="off" />
                             </div>
                         </div>
                     </div>

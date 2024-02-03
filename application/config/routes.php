@@ -6,6 +6,7 @@ $route['default_controller']    = 'home';
 $route['dashboard']             = 'dashboard';
 $route['user']                  = 'user';
 $route['seminar']               = 'seminar';
+$route['ruangan']               = 'ruangan';
 
 $route['blocked']               = 'auth/blocked';
 $route['system_error']          = 'auth/system_error';
