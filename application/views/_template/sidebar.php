@@ -7,6 +7,7 @@
             <img alt="Logo" src="<?= base_url() ?>public/assets/media/logos/unhas-small.png" class="h-40px app-sidebar-logo-minimize" />
         </a>
         <!--end::Logo image-->
+
         <!--begin::Sidebar toggle-->
         <!--begin::Minimized sidebar setup:-->
         <div id="kt_app_sidebar_toggle" class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary h-30px w-30px position-absolute top-50 start-100 translate-middle rotate" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="app-sidebar-minimize">
@@ -18,6 +19,7 @@
         <!--end::Sidebar toggle-->
     </div>
     <!--end::Logo-->
+
     <!--begin::sidebar menu-->
     <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
         <!--begin::Menu wrapper-->
