@@ -6,17 +6,14 @@ class User extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // $this->load->model('wuling_admin/model_adm_setting');
+        // $this->load->model('model_user');
     }
 
     public function index()
     {
-        $data = [
-            'judul'    => 'Pengaturan User',
-            'konten'   => 'admin/user'
-        ];
-
-        $this->load->view('_template/index', $data);
+        $this->layout
+            ->title('Pengautran User')
+            ->view('user/index');
     }
 }
 
