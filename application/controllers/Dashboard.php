@@ -6,17 +6,20 @@ class Dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // $this->load->model('wuling_admin/model_adm_setting');
+        // $this->load->model('model_dashboard');
     }
 
     public function index()
     {
+        $background = 'public/assets/media/auth/agency.png';
         $data = [
-            'judul'    => 'Dashboard',
-            'konten'   => 'admin/dashboard'
+            'background' => $background
         ];
 
-        $this->load->view('_template/index', $data);
+        $this->layout
+            ->title('Dashboard')
+            ->data($data)
+            ->view('dashboard/index');
     }
 }
 
