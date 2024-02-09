@@ -16,7 +16,6 @@
     <meta property="og:site_name" content="Ilmu Tanah Unhas" />
     <link rel="canonical" href="https://soil.agriculture.unhas.ac.id/" />
     <link rel="shortcut icon" href="<?= base_url() ?>public/assets/media/logos/favicon.ico" />
-
     <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>public/assets/media/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>public/assets/media/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>public/assets/media/favicon/favicon-16x16.png">
@@ -29,12 +28,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
 
-    <!--begin::Vendor Stylesheets(used for this page only)-->
-    <link href="<?= base_url() ?>public/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url() ?>public/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-    <!--end::Vendor Stylesheets-->
-
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link href="<?= base_url() ?>public/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url() ?>public/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url() ?>public/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
@@ -328,7 +323,7 @@
 
     <!--begin::Javascript-->
     <script>
-        var hostUrl = "assets/";
+        var hostUrl = "public/assets/";
     </script>
 
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
@@ -339,6 +334,10 @@
     <!--begin::Vendors Javascript-->
     <script src="<?= base_url() ?>public/assets/plugins/custom/datatables/datatables.bundle.js"></script>
     <!--end::Vendors Javascript-->
+
+    <!--begin::Custom Javascript-->
+    <script src="<?= base_url() ?>public/assets/js/custom/awi.js"></script>
+    <!--end::Custom Javascript-->
 
     <!--begin::CurrentPage Javascript-->
     <?= $javascript; ?>
