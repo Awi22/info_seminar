@@ -7,10 +7,15 @@ $route['dashboard']             = 'dashboard';
 
 $route['user']                  = 'user';
 
-$route['seminar']               = 'seminar';
+//* Menu Master Ruangan
+$route['ruangan']                   = 'ruangan';
+$route['ruangan/get']               = 'ruangan/get';
+$route['ruangan/simpan']            = "ruangan/simpan";
+$route['ruangan/get_ruangan_by_id'] = "ruangan/get_ruangan_by_id";
+$route['ruangan/update']            = "ruangan/update";
+$route['ruangan/hapus']             = "ruangan/hapus";
 
-$route['ruangan']               = 'ruangan';
-$route['ruangan/get']           = 'ruangan/get';
+$route['seminar']               = 'seminar';
 
 $route['blocked']               = 'auth/blocked';
 $route['system_error']          = 'auth/system_error';
