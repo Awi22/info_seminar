@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$route['default_controller']    = 'home';
+$route['default_controller']        = 'home';
 
-$route['dashboard']             = 'dashboard';
+$route['dashboard']                 = 'dashboard';
 
-$route['user']                  = 'user';
+$route['user']                      = 'user';
 
 //* Menu Master Ruangan
 $route['ruangan']                   = 'ruangan';
@@ -15,11 +15,14 @@ $route['ruangan/get_ruangan_by_id'] = "ruangan/get_ruangan_by_id";
 $route['ruangan/update']            = "ruangan/update";
 $route['ruangan/hapus']             = "ruangan/hapus";
 
-$route['seminar']               = 'seminar';
+//* Menu Data Seminar
+$route['seminar']                   = 'seminar';
+$route['seminar/get']               = 'seminar/get';
+$route['seminar/select2_ruangan']   = 'seminar/select2_ruangan';
 
-$route['blocked']               = 'auth/blocked';
-$route['system_error']          = 'auth/system_error';
-$route['not_found']             = 'auth/not_found';
-$route['change_password']       = 'auth/change_password';
-$route['404_override']          = 'auth/not_found';
-$route['translate_uri_dashes']  = FALSE;
+$route['blocked']                   = 'auth/blocked';
+$route['system_error']              = 'auth/system_error';
+$route['not_found']                 = 'auth/not_found';
+$route['change_password']           = 'auth/change_password';
+$route['404_override']              = 'auth/not_found';
+$route['translate_uri_dashes']      = FALSE;
