@@ -112,7 +112,7 @@
                                                 <span class="path4"></span>
                                             </i>
                                         </span>
-                                        <span class="menu-title">JADWAL SEMINAR MAHASISWA ILMU TANAH</span>
+                                        <span class="menu-title">SEMINAR MAHASISWA ILMU TANAH</span>
                                     </span>
                                 </div>
                             </div>
