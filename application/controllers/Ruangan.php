@@ -18,7 +18,7 @@ class Ruangan extends CI_Controller
 
     public function get()
     {
-        $data = $this->ruangan->get();
+        $data     = $this->ruangan->get();
         responseJson(['aaData' => $data]);
     }
 

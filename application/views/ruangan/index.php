@@ -66,11 +66,9 @@
             <div class="modal-body p-5">
                 <div class="row">
                     <div class="col">
-                        <div class="col">
-                            <div class="fv-row mb-5">
-                                <label class="fs-6 mb-1">Nama Ruangan</label>
-                                <input type="text" class="form-control form-control-sm" placeholder="Nama Ruangan" name="ruangan_name" id="ruangan_name" autocomplete="off" />
-                            </div>
+                        <div class="fv-row mb-5">
+                            <label class="fs-6 mb-1">Nama Ruangan</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="Nama Ruangan" name="ruangan_name" id="ruangan_name" autocomplete="off" />
                         </div>
                     </div>
                 </div>
