@@ -19,6 +19,10 @@ $route['ruangan/hapus']             = "ruangan/hapus";
 $route['seminar']                   = 'seminar';
 $route['seminar/get']               = 'seminar/get';
 $route['seminar/select2_ruangan']   = 'seminar/select2_ruangan';
+$route['seminar/simpan']            = "seminar/simpan";
+$route['seminar/get_seminar_by_id'] = "seminar/get_seminar_by_id";
+$route['seminar/update']            = "seminar/update";
+$route['seminar/hapus']             = "seminar/hapus";
 
 $route['blocked']                   = 'auth/blocked';
 $route['system_error']              = 'auth/system_error';

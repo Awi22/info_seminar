@@ -100,16 +100,188 @@
     });
 
     // simpan seminar
+    $(document).on('click', '#btn-simpan', function() {
+        //init var
+        let seminar_id = null,
+            nim = $("#nim").val(),
+            nama = $("#nama").val(),
+            tanggal = $("#tanggal_input").val(),
+            jam_mulai = $("#jam_mulai_input").val(),
+            jam_selesai = $("#jam_selesai_input").val(),
+            ruangan = $("#ruangan").val(),
+            the_url = "<?= site_url('seminar/simpan'); ?>";
+
+        if (is_update) {
+            seminar_id = $('#btn-simpan').data('seminar-id');
+            the_url = "<?= site_url('seminar/update'); ?>";
+        }
+
+        if (nim.length == 0 || nim == '') {
+            pesan('warning', 'NIM tidak boleh kosong!');
+            $("#nim").focus();
+            return false;
+        }
+
+        if (nama.length == 0 || nama == '') {
+            pesan('warning', 'Nama mahasiswa tidak boleh kosong!');
+            $("#nama").focus();
+            return false;
+        }
+
+        if (tanggal.length == 0 || tanggal == '') {
+            pesan('warning', 'Tanggal tidak boleh kosong!');
+            $("#tanggal_input").focus();
+            return false;
+        }
+
+        if (jam_mulai.length == 0 || jam_mulai == '') {
+            pesan('warning', 'Jam mulai tidak boleh kosong!');
+            $("#jam_mulai_input").focus();
+            return false;
+        }
+
+        if (jam_selesai.length == 0 || jam_selesai == '') {
+            pesan('warning', 'Jam selesai tidak boleh kosong!');
+            $("#jam_selesai_input").focus();
+            return false;
+        }
+
+        if (ruangan.length == 0 || ruangan == '') {
+            pesan('warning', 'Ruangan tidak boleh kosong!');
+            $("#ruangan").focus();
+            return false;
+        }
+
+        konfirmasi('Anda yakin untuk menyimpan data?').then(function(e) {
+            if (e.value) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "JSON",
+                    url: the_url,
+                    data: {
+                        seminar_id: seminar_id,
+                        nim: nim,
+                        nama: nama,
+                        tanggal: tanggal,
+                        jam_mulai: jam_mulai,
+                        jam_selesai: jam_selesai,
+                        ruangan: ruangan,
+                    },
+                    beforeSend: function() {
+                        $("#btn-simpan").attr("data-kt-indicator", "on").prop("disabled", true)
+                    },
+                    success: function(response) {
+                        if (response.status) {
+                            peringatan("Sukses", response.pesan, 'success', 1500)
+                            tabel_seminar.ajax.reload();
+                            reset_form();
+                        } else {
+                            peringatan("Error", response.pesan, 'error')
+                                .then(function() {
+                                    location.reload();
+                                });
+                        }
+                        $('#modal_tambah_seminar').modal('hide');
+                        $("#btn-simpan").removeAttr("data-kt-indicator").prop("disabled", false)
+                    },
+                    error: function(xhr, status, error) {
+                        var err = eval("(" + xhr.responseText + ")");
+                        console.log(err.Message);
+                        pesan("error", "Terjadi Kesalahan");
+                        location.reload();
+                    }
+                });
+            }
+        })
+    });
 
     // edit seminar
+    $(document).on('click', '.btn-edit', function() {
+        let seminar_id = $(this).data('id');
+        is_update = true;
+        is_copy = false;
+        $(".judul-modal").text("Edit Seminar");
+
+        $.ajax({
+            dataType: "JSON",
+            url: "<?= site_url('seminar/get_seminar_by_id'); ?>",
+            data: {
+                id: seminar_id
+            },
+            success: function(response) {
+                $("#nim").val(response.nim);
+                $("#nama").val(response.nama);
+                $("#tanggal_input").val(response.tanggal);
+                $("#jam_mulai_input").val(response.jam_mulai);
+                $("#jam_selesai_input").val(response.jam_selesai);
+                $("#ruangan").val(response.ruangan).trigger('change');
+
+                $('#btn-simpan').data('seminar-id', seminar_id);
+            },
+            error: function(xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                console.log(err.Message);
+                pesan_swal('error', err.Message);
+            }
+        });
+    });
 
     // hapus seminar
+    $(document).on('click', '.btn-hapus', function() {
+        let seminar_id = $(this).data('id');
+
+        konfirmasi('Anda yakin ingin menghapus data ini?')
+            .then(function(e) {
+                if (e.value) {
+                    $.ajax({
+                        type: "POST",
+                        url: "<?= site_url('seminar/hapus'); ?>",
+                        data: {
+                            seminar_id: seminar_id
+                        },
+                        dataType: "JSON",
+                        success: function(response) {
+                            if (response.status) {
+                                peringatan("Sukses", response.pesan, 'success', 1500)
+                                    .then(function() {
+                                        tabel_seminar.ajax.reload();
+                                    })
+                            } else {
+                                peringatan("Error", response.pesan, 'error')
+                                    .then(function() {
+                                        location.reload();
+                                    });
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            var err = eval("(" + xhr.responseText + ")");
+                            console.log(err.Message);
+                            pesan("error", "Terjadi Kesalahan");
+                        }
+                    });
+                }
+            })
+    });
+
+    $('#modal_tambah_seminar').on('hidden.bs.modal', function() {
+        // $(".table-coverage").show();
+        // $(".table-coverage-edit").hide();
+    });
+
+    reset_form = () => {
+        $("#nim").val('');
+        $("#nama").val('');
+        $("#tanggal_input").val('');
+        $("#jam_mulai_input").val('');
+        $("#jam_selesai_input").val('');
+        $("#ruangan").val(null).trigger('change');
+    }
 
     // tanggal
     new tempusDominus.TempusDominus(document.getElementById("tanggal_input"), {
         localization: {
             locale: 'in-IN',
-            format: 'dddd, dd-MM-yyyy',
+            format: 'dd-MM-yyyy',
         },
         display: {
             viewMode: "calendar",

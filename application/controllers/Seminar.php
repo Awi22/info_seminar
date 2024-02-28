@@ -34,6 +34,27 @@ class Seminar extends CI_Controller
         $result   = $this->seminar->simpan_seminar($posts);
         responseJson($result);
     }
+
+    public function get_seminar_by_id()
+    {
+        $id       = $this->input->get("id");
+        $result   = $this->seminar->get_seminar_by_id($id);
+        responseJson($result);
+    }
+
+    public function update()
+    {
+        $posts    = $this->input->post(NULL, TRUE);
+        $result   = $this->seminar->update_seminar($posts);
+        responseJson($result);
+    }
+
+    public function hapus()
+    {
+        $posts    = $this->input->post(NULL, TRUE);
+        $result   = $this->seminar->hapus_seminar($posts);
+        responseJson($result);
+    }
 }
 
 /* End of file Seminar.php */

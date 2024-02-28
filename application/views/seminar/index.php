@@ -18,7 +18,6 @@
     </div>
     <!--end::Toolbar-->
 
-
     <!--begin::Content-->
     <div id="kt_app_content" class="app-content flex-column-fluid py-3">
         <!--begin::Content container-->
@@ -38,7 +37,7 @@
                                     <th>Jam Mulai</th>
                                     <th>Jam Selesai</th>
                                     <th>Ruangan</th>
-                                    <th class="text-center w-50px">Aksi</th>
+                                    <th class="text-center w-150px">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody class="text-gray-700">
@@ -96,7 +95,7 @@
                                 <span class="required">Tanggal Seminar</span>
                             </label>
                             <div class="input-group" id="tanggal" data-td-target-input="nearest" data-td-target-toggle="nearest">
-                                <input id="tanggal_input" type="text" class="form-control" data-td-target="#tanggal" placeholder="Day, DD-MM-YYYY" />
+                                <input id="tanggal_input" type="text" class="form-control" data-td-target="#tanggal" placeholder="DD-MM-YYYY" />
                                 <span class="input-group-text" data-td-target="#tanggal" data-td-toggle="datetimepicker">
                                     <i class="ki-duotone ki-calendar fs-2">
                                         <span class="path1"></span>
