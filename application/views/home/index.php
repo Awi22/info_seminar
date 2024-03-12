@@ -17,13 +17,17 @@
     <meta property="og:site_name" content="Metronic by Keenthemes" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" href="<?= base_url() ?>public/assets/media/logos/favicon.ico" />
+
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
     <!--end::Fonts-->
+
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link href="<?= base_url() ?>public/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url() ?>public/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url() ?>public/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
+
     <script>
         // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
     </script>
@@ -59,7 +63,6 @@
         <style>
             body {
                 background-image: url("<?= base_url() ?>public/assets/media/auth/bg8.jpg");
-
             }
 
             [data-bs-theme="dark"] body {
@@ -68,42 +71,53 @@
         </style>
         <!--end::Page bg image-->
         <!--begin::Authentication - Signup Welcome Message -->
-        <div class="d-flex flex-column flex-center flex-column-fluid">
-            <!--begin::Content-->
-            <div class="d-flex flex-column flex-center text-center p-10">
-                <!--begin::Wrapper-->
-                <div class="card card-flush w-md-650px py-5">
-                    <div class="card-body py-15 py-lg-20">
-                        <!--begin::Logo-->
-                        <div class="mb-7">
-                            <a href="index.html" class="">
-                                <img alt="Logo" src="<?= base_url() ?>public/assets/media/logos/custom-2.svg" class="h-40px" />
-                            </a>
-                        </div>
-                        <!--end::Logo-->
-                        <!--begin::Title-->
-                        <h1 class="fw-bolder text-gray-900 mb-5">Welcome to Metronic</h1>
-                        <h1><?= $nama ?></h1>
-                        <!--end::Title-->
-                        <!--begin::Text-->
-                        <div class="fw-semibold fs-6 text-gray-500 mb-7">This is your opportunity to get creative and make a name
-                            <br />that gives readers an idea
-                        </div>
-                        <!--end::Text-->
-                        <!--begin::Illustration-->
-                        <div class="mb-0">
-                            <img src="<?= base_url() ?>public/assets/media/auth/welcome.png" class="mw-100 mh-300px theme-light-show" alt="" />
-                            <img src="<?= base_url() ?>public/assets/media/auth/welcome-dark.png" class="mw-100 mh-300px theme-dark-show" alt="" />
-                        </div>
-                        <!--end::Illustration-->
-                        <!--begin::Link-->
-                        <div class="mb-0">
-                            <a href="index.html" class="btn btn-sm btn-primary">Go To Dashboard</a>
-                        </div>
-                        <!--end::Link-->
+        <div class="d-flex flex-column flex-column-fluid">
+            <!--begin::Toolbar-->
+            <div id="kt_app_toolbar" class="app-toolbar py-3">
+                <!--begin::Toolbar container-->
+                <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+                    <!--begin::Page title-->
+                    <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                        <h1 class="page-heading d-flex text-gray-700 fw-bold fs-3 flex-column justify-content-center my-0"><?= $judul ?></h1>
                     </div>
+                    <!--end::Page title-->
                 </div>
-                <!--end::Wrapper-->
+                <!--end::Toolbar container-->
+            </div>
+            <!--end::Toolbar-->
+
+            <!--begin::Content-->
+            <div id="kt_app_content" class="app-content flex-column-fluid py-3">
+                <!--begin::Content container-->
+                <div id="kt_app_content_container" class="app-container container-fluid">
+                    <!--begin::Card-->
+                    <div class="card">
+                        <!--begin::Card body-->
+                        <div class="card-body py-4">
+                            <div class="table-responsive">
+                                <table id="tabel_seminar" class="table align-middle table-row-dashed fs-6 gy-5">
+                                    <thead>
+                                        <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
+                                            <th class="text-left">No</th>
+                                            <th>NIM</th>
+                                            <th>Nama Mahasiswa</th>
+                                            <th>Tanggal</th>
+                                            <th>Jam Mulai</th>
+                                            <th>Jam Selesai</th>
+                                            <th>Ruangan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-700">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--end::Table-->
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Card-->
+                </div>
+                <!--end::Content container-->
             </div>
             <!--end::Content-->
         </div>
@@ -112,13 +126,82 @@
     <!--end::Root-->
     <!--begin::Javascript-->
     <script>
-        var hostUrl = "assets/";
+        var hostUrl = "public/assets/";
     </script>
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
     <script src="<?= base_url() ?>public/assets/plugins/global/plugins.bundle.js"></script>
     <script src="<?= base_url() ?>public/assets/js/scripts.bundle.js"></script>
     <!--end::Global Javascript Bundle-->
+
+    <!--begin::Vendors Javascript-->
+    <script src="<?= base_url() ?>public/assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <!--end::Vendors Javascript-->
+
+    <!--begin::Custom Javascript-->
+    <script src="<?= base_url() ?>public/assets/js/custom/awi.js"></script>
+    <!--end::Custom Javascript-->
+
+    <script>
+        $(document).ready(function() {
+
+            tabel_seminar = $("#tabel_seminar").DataTable({
+                processing: true,
+                searching: false,
+                // paging: true,
+                pageLength: 10,
+                ajax: {
+                    url: "<?= site_url('seminar/get') ?>",
+                },
+                language: {},
+                columns: [{
+                        data: "no",
+                    },
+                    {
+                        data: "nim",
+                    },
+                    {
+                        data: "nama",
+                    },
+                    {
+                        data: "tanggal",
+                    },
+                    {
+                        data: "jam_mulai",
+                    },
+                    {
+                        data: "jam_selesai",
+                    },
+                    {
+                        data: "ruangan",
+                    },
+                ],
+                dom: `
+                "<'row'" +
+                "<'col-sm-6 d-flex align-items-center justify-conten-start'l>" +
+                "<'col-sm-6 d-flex align-items-center justify-content-end'f>" +
+                ">" +
+
+                "<'table-responsive'tr>" +
+
+                "<'row'" +
+                "<'col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start'i>" +
+                "<'col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end'p>" +
+                ">"	`,
+            }).on('error.dt', function(e, settings, techNote, message) {
+                pesan('error', message);
+                console.log('Error DataTables: ', message);
+            });; //table_seminar
+        }); //ready
+    </script>
     <!--end::Javascript-->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var target_url = window.location.href;
+            $("a[href='" + target_url + "']").parent().parent().parent().addClass("here show");
+            $("a[href='" + target_url + "']").addClass("active");
+        })
+    </script>
 </body>
 <!--end::Body-->
 
